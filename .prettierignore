@@ -1,0 +1,23 @@
+# Ignore all node_modules
+node_modules/
+
+#Ignore all env files
+*.env
+.env.
+.env*
+
+# Ignore build directories
+build/
+dist/
+
+# Ignore specific files
+*.min.js
+*.bundle.js
+
+# Ignore configuration files
+.prettierrc
+.prettierignore
+
+# Ignore test files
+**/*.spec.js
+**/*.test.js
