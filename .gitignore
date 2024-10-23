@@ -1,0 +1,41 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs
+*.log
+pids
+*.pid
+*.seed
+
+# Build directories
+build/
+dist/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Optional npm cache directory
+.npm/
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
