@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "description": "Video Watching app",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev": "nodemon ./src/index.js"
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
   },
   "author": "Roshan Shaikh",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongoose": "^8.7.2",
     "nodemon": "^3.1.7"
   },
   "devDependencies": {
