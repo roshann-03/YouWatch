@@ -3,6 +3,7 @@ import cors from "cors";
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
+import { verifyUser } from "./middlewares/verifyUser.middleware.js";
 
 const app = express();
 app.use(
