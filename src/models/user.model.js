@@ -72,22 +72,22 @@ userSchema.methods.isPasswordMatched = async function (enteredPassword) {
 };
 
 userSchema.methods.generateAuthToken = function () {
-  const token = jwt.sign(
+  const authToken = jwt.sign(
     { _id: this._id, email: this.email },
     process.env.AUTH_TOKEN_SECRET,
     {
       expiresIn: process.env.AUTH_TOKEN_EXPIRE,
     }
   );
-  return token;
+  return authToken;
 };
 
-userSchema.generateRefreshToken = function () {
+userSchema.methods.generateRefreshToken = function () {
   const refreshToken = jwt.sign(
     { _id: this._id, email: this.email },
     process.env.REFRESH_TOKEN_SECRET,
     {
-      expiresIn: REFRESH_TOKEN_EXPIRE,
+      expiresIn: process.env.REFRESH_TOKEN_EXPIRE,
     }
   );
   return refreshToken;

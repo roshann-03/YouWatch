@@ -3,7 +3,8 @@ import {
   loginUser,
   registerUser,
   logoutUser,
-} from "../controllers/user.controller.js";
+  refreshAuthToken
+} from "../controllers/userController/user.controller.js";
 import upload from "../middlewares/multer.middleware.js";
 import { verifyUser } from "../middlewares/verifyUser.middleware.js";
 
@@ -24,7 +25,6 @@ router.route("/register").post(
 );
 
 router.route("/login").post(loginUser);
-
 router.route("/logout").post(verifyUser, logoutUser);
-
+router.route("/refresh-token").post(refreshAuthToken);
 export default router;
