@@ -8,6 +8,9 @@ import {
   updateAccountDetails,
   updateAvatar,
   updateCoverImage,
+  deleteAvatar,
+  deleteAvatarFromCloudinary,
+  deleteCoverImageFromCloudinary
 } from "./user.update.js";
 
 export {
@@ -20,4 +23,7 @@ export {
   updateAccountDetails,
   updateAvatar,
   updateCoverImage,
+  deleteAvatar,
+  deleteAvatarFromCloudinary,
+  deleteCoverImageFromCloudinary
 };
