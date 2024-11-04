@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 const VideoUpdateForm = () => {
   const location = useLocation();
@@ -51,7 +51,6 @@ const VideoUpdateForm = () => {
     <div className="flex justify-center py-10 items-center min-h-screen h-full w-full bg-black">
       <div className="min-h-screen h-fit w-fit">
         <form
-          className="border"
           encType="multipart/form-data"
           onSubmit={handleSubmit}
           className="bg-gray-800 text-white p-6 rounded-lg shadow-lg"
@@ -101,7 +100,9 @@ const VideoUpdateForm = () => {
           </div>
           <button
             type="submit"
-            className={`w-full  ${loading ? "opacity-50" : ""} bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded transition duration-200`}
+            className={`w-full  ${
+              loading ? "opacity-50" : ""
+            } bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded transition duration-200`}
           >
             {loading ? "Updating..." : "Update Video"}
           </button>
